@@ -16,13 +16,13 @@ form.addEventListener("submit", (e) => {
         const fieldName = input.name
 
         if (fieldName.startsWith("student")) {
-            data["siswa"][fieldName.split("-", 1)[1]] = input.value
+            data["siswa"][fieldName.split("-")[1]] = input.value
         }
         else if (fieldName.startsWith("father")) {
             data["ayah"][fieldName.split("-")[1]] = input.value
         }
         else if (fieldName.startsWith("mother")) {
-            data["ibu"][fieldName.split("-", 1)[1]] = input.value
+            data["ibu"][fieldName.split("-")[1]] = input.value
         }
     })
 

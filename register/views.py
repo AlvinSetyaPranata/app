@@ -21,16 +21,18 @@ class Registrasi(View):
         # Konversi json string ke json object
         data_ayah = loads(data["ayah"])
         data_ibu = loads(data["ibu"])
+        data_siswa = loads(data["siswa"])
+
+
+        print(data_ibu)
 
 
         model_ayah = OrangTua.objects.create(**data_ayah)
         model_ibu = OrangTua.objects.create(**data_ibu)
+        model_siswa = Siswa.objects.create(ayah=model_ayah, ibu=model_ibu, **data_siswa)
 
         model_ayah.save()
         model_ibu.save()
-
-
-        model_siswa = Siswa.objects.create(ayah=model_ayah, ibu=model_ibu, **data["siswa"])
         model_siswa.save()
 
         return HttpResponse("<h1>Succes<<h2>")
