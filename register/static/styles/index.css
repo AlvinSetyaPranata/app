@@ -1,0 +1,88 @@
+@import url(base.css);
+
+
+.container {
+    padding: 2.5rem 2rem;
+}
+
+
+.container h1 {
+    font-size: var(--heading-size);
+}
+
+
+.container h2 {
+    font-size: var(--subheading-size);
+    margin-top: 5px;
+    font-weight: 400;
+    color: gray;
+}
+
+
+.container form {
+    margin-top: 60px;
+}
+
+.container .form-section {
+    margin-bottom: 100px;
+}
+
+.container .form-section h3 {
+    font-size: var(--subheading-size);
+    font-weight: bold;
+}
+
+.container .form-section .form-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    margin-top: 50px;
+}
+
+
+.container .form-section .form-holder .field {
+    display: grid;
+    row-gap: 10px;
+    max-width: 300px;
+    font-size: var(--p-size);
+    font-weight: 500;
+}
+
+
+
+.container .form-section .form-holder .field input, 
+.container .form-section .form-holder .field select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    outline: none;
+    font-size: var(--p-size);
+}
+
+
+.button-container {
+    display: flex;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.button-container button {
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: calc(var(--p-size) - 0.5px);
+}
+
+
+.button-container button:first-child {
+    background-color: blue;
+    font-weight: 500;
+    color: white;
+}
+
+.button-container button:last-child {
+    background-color: green;
+    font-weight: 500;
+    color: white;
+}

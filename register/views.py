@@ -5,7 +5,7 @@ from django.http.response import HttpResponse
 
 class Registrasi(View):
     def get(self, request):
-        return render(request, "registrasi.html")
+        return render(request, "index.html")
 
 
     def post(self, request):
