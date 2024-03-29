@@ -13,7 +13,7 @@
       <h1>Formulir Registrasi</h1>
       <h2>Harap lakukan registrasi sesuai dengan data asli</h2>
 
-      <form method="post" action="/">
+      <form method="post">
         {% csrf_token %}
 
         <!-- bagian siswa -->
@@ -22,30 +22,30 @@
           <div class="form-holder">
             <div class="field">
               <label>NIK</label>
-              <input type="text" name="student-national-id" required/>
+              <input type="text" name="student-nik" required/>
             </div>
             <div class="field">
               <label>Nama</label>
-              <input type="text" name="student-name" required/>
+              <input type="text" name="student-nama" required/>
             </div>
             <div class="field">
               <label>Tanggal Lahir</label>
-              <input type="date" name="student-birth" required/>
+              <input type="date" name="student-tanggal_lahir" required/>
             </div>
             <div class="field">
               <label>Jenis Kelamin</label>
-              <select name="student-gender" id="gender">
+              <select name="student-jenis_kelamin" id="gender">
                 <option value="L">Laki-Laki</option>
                 <option value="P">Perempuan</option>
               </select>
             </div>
             <div class="field">
               <label>Alamat</label>
-              <input type="text" name="student-address" required />
+              <input type="text" name="student-alamat" required />
             </div>
             <div class="field">
               <label>Asal Sekolah</label>
-              <input type="text" name="student-education" required />
+              <input type="text" name="student-asal_sekolah" required />
             </div>
           </div>
         </div>
@@ -56,23 +56,23 @@
           <div class="form-holder">
             <div class="field">
               <label>NIK</label>
-              <input type="text" name="father-national-id" required />
+              <input type="text" name="father-nik" required />
             </div>
             <div class="field">
               <label>Nama</label>
-              <input type="text" name="father-name" required/>
+              <input type="text" name="father-nama" required/>
             </div>
             <div class="field">
               <label>Tanggal Lahir</label>
-              <input type="date" name="father-birth" required/>
+              <input type="date" name="father-tanggal_lahir" required/>
             </div>
             <div class="field">
               <label>Alamat</label>
-              <input type="text" name="father-address" required/>
+              <input type="text" name="father-alamat" required/>
             </div>
             <div class="field">
               <label>Pekerjaan</label>
-              <input type="text" name="father-job" required/>
+              <input type="text" name="father-pekerjaan" required/>
             </div>
           </div>
         </div>
@@ -83,23 +83,23 @@
           <div class="form-holder">
             <div class="field">
               <label>NIK</label>
-              <input type="text" name="mother-national-id" required/>
+              <input type="text" name="mother-nik" required/>
             </div>
             <div class="field">
               <label>Nama</label>
-              <input type="text" name="mother-name" required/>
+              <input type="text" name="mother-nama" required/>
             </div>
             <div class="field">
               <label>Tanggal Lahir</label>
-              <input type="date" name="mother-birth" required/>
+              <input type="date" name="mother-tanggal_lahir" required/>
             </div>
             <div class="field">
               <label>Alamat</label>
-              <input type="text" name="mother-address" required/>
+              <input type="text" name="mother-alamat" required/>
             </div>
             <div class="field">
               <label>Pekerjaan</label>
-              <input type="text" name="mother-job" required/>
+              <input type="text" name="mother-pekerjaan" required/>
             </div>
           </div>
         </div>
