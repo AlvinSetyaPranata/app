@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class OrangTua(models.Model):
+    nik = models.IntegerField()
     nama = models.CharField(max_length=255)
     tanggal_lahir = models.DateTimeField()
     jenis_kelamin = models.CharField(max_length=1)
@@ -12,6 +13,7 @@ class OrangTua(models.Model):
 
 
 class Siswa(models.Model):
+    nik = models.IntegerField()
     nama = models.CharField(max_length=255)
     tanggal_lahir = models.DateTimeField()
     jenis_kelamin = models.CharField(max_length=1)
@@ -19,7 +21,4 @@ class Siswa(models.Model):
     alamat = models.CharField(max_length=255)
     ayah = models.ForeignKey(OrangTua, on_delete=models.CASCADE, related_name="ayah")
     ibu = models.ForeignKey(OrangTua, on_delete=models.CASCADE, related_name="ibu")
-
-
-
 
