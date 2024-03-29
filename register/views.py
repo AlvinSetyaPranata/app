@@ -9,5 +9,6 @@ class Registrasi(View):
 
 
     def post(self, request):
-        pass
+        print(request.POST)
+        return HttpResponse("<h1>Succes<<h2>")
 

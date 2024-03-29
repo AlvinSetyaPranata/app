@@ -2,7 +2,7 @@
 
 
 .container {
-    padding: 2.5rem 2rem;
+    padding: 5rem;
 }
 
 
@@ -35,7 +35,7 @@
 .container .form-section .form-holder {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
+    row-gap: 45px;
     margin-top: 50px;
 }
 
@@ -75,14 +75,13 @@
 }
 
 
-.button-container button:first-child {
-    background-color: blue;
+.button-container button {
+    background-color: green;
     font-weight: 500;
     color: white;
 }
 
-.button-container button:last-child {
-    background-color: green;
-    font-weight: 500;
-    color: white;
+
+.button-container button:hover {
+    cursor: pointer;
 }
