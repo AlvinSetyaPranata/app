@@ -1,8 +1,14 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import Registrasi
+from .views import (
+    FormRegistrasi,
+    SiswaList,
+    OrangTuaList
+)
 
 urlpatterns = [
-    path('', Registrasi.as_view(), name="registrasi"),
+    path('', FormRegistrasi.as_view(), name="registrasi"),
+    path('api/siswa', SiswaList.as_view(), name="daftar-siswa"),
+    path('api/orangtua', OrangTuaList.as_view(), name="daftar-siswa"),
 ]
