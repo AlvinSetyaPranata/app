@@ -32,6 +32,8 @@ class FormRegistrasi(APIView):
         data_ibu = loads(data["ibu"])
         data_siswa = loads(data["siswa"])
 
+        print(data_ayah)
+
 
         model_ayah = OrangTua.objects.create(**data_ayah)
         model_ibu = OrangTua.objects.create(**data_ibu)

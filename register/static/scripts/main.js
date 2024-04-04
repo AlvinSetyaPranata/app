@@ -32,6 +32,8 @@ form.addEventListener("submit", (e) => {
     formData.append("ayah", JSON.stringify(data["ayah"]))
     formData.append("ibu", JSON.stringify(data["ibu"]))
 
+    console.log(formData);
+
     fetch("", {
         method: "POST",
         body: formData
