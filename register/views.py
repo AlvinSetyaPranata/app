@@ -1,6 +1,7 @@
 from json import loads
 from django.shortcuts import render
 from django.http.response import HttpResponse
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -49,7 +50,7 @@ class FormRegistrasi(APIView):
 class SiswaList(APIView):
     permission_classes = [AllowAny]
     
-    def get(self, request):
+    def get(self, _):
         data = SiswaSerializer(Siswa.objects.all(), many=True)
 
         return Response(data.data)
@@ -58,7 +59,36 @@ class SiswaList(APIView):
 class OrangTuaList(APIView):
     permission_classes = [AllowAny]
 
-    def get(self, request):
+    def get(self, _):
         data = OrangTuaSerializer(OrangTua.objects.all(), many=True)
+
+        return Response(data.data)
+    
+
+class SiswaDetails(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, _, pk):
+
+        query_data = Siswa.objects.filter(pk=pk)
+
+        if not query_data:
+            return Response({"Messege" : f"Tidak ada data dengan id {pk}"}, status=status.HTTP_404_NOT_FOUND)
+
+        data = SiswaSerializer(query_data[0], many=True)
+
+        return Response(data.data)
+
+class OrangTuaDetails(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, _, pk):
+
+        query_data = OrangTua.objects.filter(pk=pk)
+
+        if not query_data:
+            return Response({"Messege" : f"Tidak ada data dengan id {pk}"}, status=status.HTTP_404_NOT_FOUND)
+
+        data = OrangTuaSerializer(query_data[0])
 
         return Response(data.data)
